@@ -43,11 +43,8 @@ document.getElementById('btn-donate-now-noakhali')
 		const newBalance = noakhaliBalance + noakhaliInput;
 		const navbarNewBalance = navbarBalance - noakhaliInput;
 
-		const noakhaliBalanceElement = document.getElementById('noakhali-balance');
-		noakhaliBalanceElement.innerText = newBalance;
-
-		const navbarNewBalanceElement = document.getElementById('navbar-balance');
-		navbarNewBalanceElement.innerText = navbarNewBalance;
+		document.getElementById('noakhali-balance').innerText = newBalance;
+		document.getElementById('navbar-balance').innerText = navbarNewBalance;
 
 		const historyItemDiv = document.createElement('div');
 		historyItemDiv.innerHTML = `
@@ -76,16 +73,13 @@ document.getElementById('btn-donate-now-noakhali')
 		const newBalance = feniBalance + feniInput;
 		const navbarNewBalance = navbarBalance - feniInput;
 
-		const feniBalanceElement = document.getElementById('feni-balance');
-		feniBalanceElement.innerText = newBalance;
-
-		const navbarNewBalanceElement = document.getElementById('navbar-balance');
-		navbarNewBalanceElement.innerText = navbarNewBalance;
+		document.getElementById('feni-balance').innerText = newBalance;
+		document.getElementById('navbar-balance').innerText = navbarNewBalance;
 
 		const historyItemDiv = document.createElement('div');
 		historyItemDiv.innerHTML = `
 			<div class='rounded-lg border-2  p-6 space-y-2 mb-4'>
-			<h2 class="text-lg font-semibold">${feniInput} Taka is Donated for Flood Relief in Feni,Bangladesh</h2>
+			<h2 class="text-lg font-semibold">${feniInput} Taka is Donated for Flood Relief in Feni, Bangladesh</h2>
 			<p class='bg-slate-100 p-4 rounded-lg'>Date: ${new Date().toString()}</p>
 			</div>
 		`;
@@ -108,11 +102,8 @@ document.getElementById('btn-donate-now-noakhali')
 		const newBalance = quotaBalance + quotaInput;
 		const navbarNewBalance = navbarBalance - quotaInput;
 
-		const quotaBalanceElement = document.getElementById('quota-balance');
-		quotaBalanceElement.innerText = newBalance;
-
-		const navbarNewBalanceElement = document.getElementById('navbar-balance');
-		navbarNewBalanceElement.innerText = navbarNewBalance;
+		document.getElementById('quota-balance').innerText = newBalance;
+		document.getElementById('navbar-balance').innerText = navbarNewBalance;
 
 		const historyItemDiv = document.createElement('div');
 		historyItemDiv.innerHTML = `
