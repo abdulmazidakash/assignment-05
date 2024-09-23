@@ -61,3 +61,38 @@ document.getElementById('btn-donate-now-noakhali')
 		document.getElementById('my-modal').showModal();
 	});
 
+
+	document.getElementById('btn-donate-now-feni')
+	.addEventListener('click', function(){
+
+		const feniInput = getInputFieldValueById('input-feni');
+		const feniBalance = getTextFieldValueById('feni-balance');
+		const navbarBalance = getTextFieldValueById('navbar-balance');
+
+		if(feniInput <= 0 || isNaN(feniInput)){
+			return alert('Invalid Donation amount') ;
+			
+		}
+		const newBalance = feniBalance + feniInput;
+		const navbarNewBalance = navbarBalance - feniInput;
+
+		const feniBalanceElement = document.getElementById('feni-balance');
+		feniBalanceElement.innerText = newBalance;
+
+		const navbarNewBalanceElement = document.getElementById('navbar-balance');
+		navbarNewBalanceElement.innerText = navbarNewBalance;
+
+		const historyItemDiv = document.createElement('div');
+		historyItemDiv.innerHTML = `
+			<div class='rounded-lg border-2  p-6 space-y-2 mb-4'>
+			<h2 class="text-lg font-semibold">${feniInput} Taka is Donated for Flood Relief in Feni,Bangladesh</h2>
+			<p class='bg-slate-100 p-4 rounded-lg'>Date: ${new Date().toString()}</p>
+			</div>
+		`;
+
+		document.getElementById('history-list').appendChild(historyItemDiv);
+		document.getElementById('my-modal').showModal();
+	});
+
+
+
