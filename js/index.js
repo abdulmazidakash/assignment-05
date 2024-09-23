@@ -94,5 +94,38 @@ document.getElementById('btn-donate-now-noakhali')
 		document.getElementById('my-modal').showModal();
 	});
 
+	document.getElementById('btn-donate-now-quota')
+	.addEventListener('click', function(){
+
+		const quotaInput = getInputFieldValueById('input-quota');
+		const quotaBalance = getTextFieldValueById('quota-balance');
+		const navbarBalance = getTextFieldValueById('navbar-balance');
+
+		if(quotaInput <= 0 || isNaN(quotaInput)){
+			return alert('Invalid Donation amount') ;
+			
+		}
+		const newBalance = quotaBalance + quotaInput;
+		const navbarNewBalance = navbarBalance - quotaInput;
+
+		const quotaBalanceElement = document.getElementById('quota-balance');
+		quotaBalanceElement.innerText = newBalance;
+
+		const navbarNewBalanceElement = document.getElementById('navbar-balance');
+		navbarNewBalanceElement.innerText = navbarNewBalance;
+
+		const historyItemDiv = document.createElement('div');
+		historyItemDiv.innerHTML = `
+			<div class='rounded-lg border-2  p-6 space-y-2 mb-4'>
+			<h2 class="text-lg font-semibold">${quotaInput} Taka is Donated for Aid Injured in the Quota Movement</h2>
+			<p class='bg-slate-100 p-4 rounded-lg'>Date: ${new Date().toString()}</p>
+			</div>
+		`;
+
+		document.getElementById('history-list').appendChild(historyItemDiv);
+		document.getElementById('my-modal').showModal();
+	});
+
+
 
 
