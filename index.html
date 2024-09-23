@@ -19,13 +19,33 @@
 	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body  class="font-family: 'Lexend', 'sans-serif';">
 
-	<header>
-		<nav>
+	<!-- <h1 class="text-5xl font-bold">Assignment five test </h1> -->
+	<header class="sticky top-0  backdrop-blur  lg:pb-1 shadow-sm">
 
+		<!-- navbar start here -->
+		<nav class="bg-[#F9F7F3]">
+			<div class="w-9/12   lg:flex  lg:justify-between lg:items-center mx-auto bg-[#F9F7F3] lg:p-8 p-2 text-center lg:space-y-4 space-y-2">
+				<div>
+					<button class="btn bg-[#B4F461] text-xl"><a href="./blog.html">Blog</a></button>
+				</div>
+				<div class="flex items-center text-xl font-bold gap-2 justify-center">
+					<img class="border-2 border-dashed" src="./images/logo.png" alt="">
+					<h2>Donate Bangladesh</h2>
+				</div>
+				<div class="flex items-center text-xl font-semibold gap-2 justify-center">
+					<img class="border-2 border-dashed" src="./images/coin.png" alt="">
+					<h2><span id="navbar-balance">5500</span> BDT</h2>
+				</div>
+			</div>
 		</nav>
-	</header>
+
+		<div class="text-center space-x-5 lg:mt-6 mt-2 mb-6 pb-2">
+			<button id="donation-tab" class="btn bg-[#B4F461] text-xl">Donation</button>
+			<button id="history-tab" class="btn text-xl">History</button>
+		</div>
+	 </header>
 
 	<main>
 
