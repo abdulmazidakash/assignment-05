@@ -1,0 +1,63 @@
+const historyTab = document.getElementById('history-tab');
+const donationTab = document.getElementById('donation-tab');
+
+historyTab.addEventListener('click', function(){
+
+	historyTab.classList.add('bg-[#B4F461]');
+	donationTab.classList.remove('bg-[#B4F461]');
+
+	document.getElementById('donation-container').classList.add('hidden');
+	document.getElementById('history-section').classList.remove('hidden');
+});
+
+donationTab.addEventListener('click', function(){
+
+	donationTab.classList.add('bg-[#B4F461]');
+	historyTab.classList.remove('bg-[#B4F461]');
+
+	document.getElementById('donation-container').classList.remove('hidden');
+	document.getElementById('history-section').classList.add('hidden');
+});
+
+function getInputFieldValueById(id){
+
+	return parseFloat(document.getElementById(id).value);
+}
+
+function getTextFieldValueById(id){
+
+	return parseFloat(document.getElementById(id).innerText);
+}
+
+document.getElementById('btn-donate-now-noakhali')
+	.addEventListener('click', function(){
+
+		const noakhaliInput = getInputFieldValueById('input-noakhali');
+		const noakhaliBalance = getTextFieldValueById('noakhali-balance');
+		const navbarBalance = getTextFieldValueById('navbar-balance');
+
+		if(noakhaliInput <= 0 || isNaN(noakhaliInput)){
+			return alert('Invalid Donation amount') ;
+		}
+
+		const newBalance = noakhaliBalance + noakhaliInput;
+		const navbarNewBalance = navbarBalance - noakhaliInput;
+
+		const noakhaliBalanceElement = document.getElementById('noakhali-balance');
+		noakhaliBalanceElement.innerText = newBalance;
+
+		const navbarNewBalanceElement = document.getElementById('navbar-balance');
+		navbarNewBalanceElement.innerText = navbarNewBalance;
+
+		const historyItemDiv = document.createElement('div');
+		historyItemDiv.innerHTML = `
+			<div class='rounded-lg border-2  p-6 space-y-2 mb-4  shadow-sm'>
+			<h2 class="text-lg font-semibold">${noakhaliInput} Taka is Donated for Flood at Noakhali, Bangladesh</h2>
+			<p class='bg-slate-100 p-4 rounded-lg'>Date: ${new Date().toString()}</p>
+			</div>
+		`;
+
+		document.getElementById('history-list').appendChild(historyItemDiv);
+		document.getElementById('my-modal').showModal();
+	});
+
