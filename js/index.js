@@ -1,3 +1,13 @@
+function getInputFieldValueById(id){
+
+	return parseFloat(document.getElementById(id).value);
+}
+
+function getTextFieldValueById(id){
+
+	return parseFloat(document.getElementById(id).innerText);
+}
+
 const historyTab = document.getElementById('history-tab');
 const donationTab = document.getElementById('donation-tab');
 
@@ -18,16 +28,6 @@ donationTab.addEventListener('click', function(){
 	document.getElementById('donation-container').classList.remove('hidden');
 	document.getElementById('history-section').classList.add('hidden');
 });
-
-function getInputFieldValueById(id){
-
-	return parseFloat(document.getElementById(id).value);
-}
-
-function getTextFieldValueById(id){
-
-	return parseFloat(document.getElementById(id).innerText);
-}
 
 document.getElementById('btn-donate-now-noakhali')
 	.addEventListener('click', function(){
