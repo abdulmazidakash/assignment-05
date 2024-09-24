@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +14,17 @@
 
 
 	<!-- font family cdn  -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+	<style>
+
+	@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+	.lexend-font{
+		font-family: "Lexend", system-ui;
+	}
+	</style>
 
 </head>
-<body  class="font-family: 'Lexend', 'sans-serif';">
+<body  class="lexend-font;">
 
 	<!-- <h1 class="text-5xl font-bold">Assignment five test </h1> -->
 	<header class="sticky top-0  backdrop-blur  lg:pb-1 shadow-sm">
@@ -31,11 +36,11 @@
 					<button class="btn bg-[#B4F461] text-xl"><a href="./blog.html">Blog</a></button>
 				</div>
 				<div class="flex items-center text-xl font-bold gap-2 justify-center">
-					<img class="border-2 border-dashed" src="./images/logo.png" alt="">
+					<img class="border-2 border-dashed" src="./images/logo.png" alt="logo">
 					<h2>Donate Bangladesh</h2>
 				</div>
 				<div class="flex items-center text-xl font-semibold gap-2 justify-center">
-					<img class="border-2 border-dashed" src="./images/coin.png" alt="">
+					<img class="border-2 border-dashed" src="./images/coin.png" alt="coin">
 					<h2><span id="navbar-balance">5500</span> BDT</h2>
 				</div>
 			</div>
@@ -56,7 +61,7 @@
 			<div class="lg:flex lg:w-9/12 w-11/12 mx-auto mt-6 border-2 p-6 rounded-lg lg:space-x-6 shadow-sm">
 				<!--left side img part  -->
 				<div class="lg:w-1/2">
-					<img src="./images/noakhali.png" alt="">
+					<img class=" " src="./images/noakhali.png" alt="noakhali-flood">
 				</div>
 
 				<!-- right side text content part -->
@@ -79,7 +84,7 @@
 			<div class="lg:flex lg:w-9/12 w-11/12 mx-auto mt-8 border-2 p-6 rounded-lg lg:space-x-6 shadow-sm">
 				<!--left side img part  -->
 				<div class="lg:w-1/2">
-					<img src="./images/feni.png" alt="">
+					<img src="./images/feni.png" alt="feni-flood">
 				</div>
 
 				<!-- right side text content part -->
@@ -102,7 +107,7 @@
 			<div class="lg:flex lg:w-9/12 w-11/12 mx-auto mt-8 border-2 p-6 rounded-lg lg:space-x-6 shadow-sm">
 				<!--left side img part  -->
 				<div class="lg:w-1/2">
-					<img src="./images/quota-protest.png" alt="">
+					<img src="./images/quota-protest.png" alt="quota-protest">
 				</div>
 
 				<!-- right side text content part -->
