@@ -36,7 +36,7 @@ document.getElementById('btn-donate-now-noakhali')
 		const noakhaliBalance = getTextFieldValueById('noakhali-balance');
 		const navbarBalance = getTextFieldValueById('navbar-balance');
 
-		if(noakhaliInput <= 0 || isNaN(noakhaliInput)){
+		if(noakhaliInput <= 0 || isNaN(noakhaliInput) || navbarBalance < noakhaliInput){
 			return alert('Invalid Donation amount') ;
 		}
 
@@ -66,7 +66,7 @@ document.getElementById('btn-donate-now-noakhali')
 		const feniBalance = getTextFieldValueById('feni-balance');
 		const navbarBalance = getTextFieldValueById('navbar-balance');
 
-		if(feniInput <= 0 || isNaN(feniInput)){
+		if(feniInput <= 0 || isNaN(feniInput) || navbarBalance < feniInput){
 			return alert('Invalid Donation amount') ;
 			
 		}
@@ -95,7 +95,7 @@ document.getElementById('btn-donate-now-noakhali')
 		const quotaBalance = getTextFieldValueById('quota-balance');
 		const navbarBalance = getTextFieldValueById('navbar-balance');
 
-		if(quotaInput <= 0 || isNaN(quotaInput)){
+		if(quotaInput <= 0 || isNaN(quotaInput) || navbarBalance < quotaInput){
 			return alert('Invalid Donation amount') ;
 			
 		}
